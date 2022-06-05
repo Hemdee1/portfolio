@@ -1,0 +1,167 @@
+.contact {
+  display: flex;
+  flex-direction: row;
+
+  .cont {
+    width: 50%;
+    margin-left: 2rem;
+
+    h1 {
+      .logo-letter {
+        font-size: 3rem;
+        display: inline-block;
+        opacity: 0;
+        animation: rotateIn 1s 1s forwards;
+      }
+
+      .logo-letter::before {
+        content: "C";
+      }
+    }
+
+    p {
+      font-size: 1rem;
+      font-weight: 600;
+      margin-top: 2rem;
+      color: var(--text-color2);
+      letter-spacing: 2px;
+      opacity: 0;
+      animation: backInUp 1s 2s forwards;
+    }
+  }
+
+  form {
+    width: 100%;
+    margin-top: 2rem;
+    opacity: 0;
+    animation: fadeInUp 1s 3s forwards;
+
+    div {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    input,
+    textarea {
+      background-color: var(--bg-input);
+      width: 100%;
+      padding: 0.5rem 1rem;
+      margin-bottom: 1rem;
+      font-size: 0.95rem;
+      border: none;
+      font-family: Poppins;
+      color: var(--text-color1);
+    }
+
+    input::placeholder,
+    textarea::placeholder {
+      font-family: inherit;
+    }
+
+    textarea {
+      resize: none;
+      height: 100px;
+    }
+
+    button {
+      margin-top: 0;
+    }
+  }
+
+  .map {
+    width: 50%;
+    height: 500px;
+    padding-left: 1rem;
+    position: relative;
+    opacity: 0;
+    animation: fadeInUp 1s 3s forwards;
+
+    iframe {
+      width: 92%;
+      height: 100vh;
+      position: absolute;
+      top: -17%;
+      // border-radius: 10px;
+      // border: 2px solid var(--primary-color);
+    }
+  }
+
+  .location {
+    position: absolute;
+    left: 52%;
+    top: 5%;
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 2px;
+    border-radius: 10px;
+    background: var(--text-color2);
+    color: var(--bg-color);
+    padding: 0.5rem 1rem;
+    opacity: 0;
+    animation: fadeInDown 1s 4s forwards;
+
+    svg {
+      font-size: 1.2rem;
+      color: crimson;
+    }
+
+    a {
+      color: var(--text-logo2);
+      text-decoration: underline;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .contact {
+    flex-direction: column;
+
+    .cont {
+      width: 100%;
+      margin-left: 0;
+      padding-right: 4rem;
+
+      p {
+        font-size: 0.8rem;
+        margin-top: 1rem;
+      }
+    }
+
+    form {
+      margin-top: 2rem;
+
+      div {
+        gap: 0.5rem;
+      }
+
+      input,
+      textarea {
+        margin-bottom: 0.5rem;
+      }
+    }
+
+    .location {
+      display: none;
+      // gonna check it up later
+      position: absolute;
+      right: 5%;
+      left: auto;
+      top: auto;
+      bottom: 2%;
+      font-size: 0.8rem;
+      padding: 0.5rem;
+      line-height: 1.2rem;
+      letter-spacing: 1px;
+      z-index: -11;
+
+      svg {
+        font-size: 1rem;
+      }
+    }
+
+    .map {
+      display: none;
+    }
+  }
+}

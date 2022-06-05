@@ -1,0 +1,105 @@
+.home {
+  display: flex;
+
+  .cont {
+    width: 50%;
+    margin-left: 2rem;
+    margin-top: 1rem;
+
+    h1 {
+      color: var(--text-color1);
+
+      .logo-letter {
+        font-size: 3rem;
+        display: inline-block;
+        opacity: 0;
+        animation: rotateIn 1s 1s forwards;
+      }
+
+      .logo-letter.two {
+        animation-delay: 1.6s;
+      }
+
+      .logo-letter.three {
+        animation-delay: 3.2s;
+      }
+
+      .logo-letter.one:before {
+        content: "H";
+      }
+
+      .logo-letter.two:before {
+        content: "M";
+      }
+
+      .logo-letter.three:before {
+        content: "W";
+      }
+    }
+
+    p {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      font-size: 1.3rem;
+      font-weight: 600;
+      margin-top: 3rem;
+      color: var(--text-color2);
+      letter-spacing: 2px;
+
+      span {
+        transition: 0.3s;
+        width: 18rem;
+
+        &:hover {
+          transform: scale(1.05);
+        }
+      }
+    }
+  }
+
+  .image {
+    width: 50%;
+    // margin-right: 5rem;
+    position: absolute;
+    right: 0;
+    top: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: -1;
+    filter: invert(0.6);
+
+    img {
+      width: 500px;
+      height: 500px;
+      padding: 0.5rem;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .home {
+    .cont {
+      width: 100%;
+      margin-left: 0;
+
+      p {
+        font-size: 1rem;
+      }
+
+      h1 {
+        .logo-letter {
+          font-size: 2.5rem;
+        }
+      }
+    }
+
+    .image {
+      // display: none;
+      right: 3rem;
+      bottom: 1rem;
+      opacity: 0.4;
+    }
+  }
+}

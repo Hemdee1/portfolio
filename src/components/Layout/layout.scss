@@ -1,0 +1,195 @@
+.layout {
+  .container {
+    margin-left: 100px;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+
+    h3 {
+      font-family: "La Belle Aurore";
+      font-size: 1.4rem;
+      color: var(--primary-color);
+      opacity: 0.5;
+      margin-bottom: 0.5rem;
+    }
+
+    h3.body {
+      margin-left: 0.5rem;
+    }
+
+    .top {
+      margin: 0.5rem 0;
+    }
+
+    .bottom {
+      margin-top: 0.5rem;
+    }
+
+    .content {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      height: 75vh;
+      margin-left: 2rem;
+    }
+  }
+
+  .toggle-btn {
+    position: absolute;
+    top: 1rem;
+    right: 5rem;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--primary-color);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s;
+    z-index: 1111;
+
+    svg {
+      font-size: 1.2rem;
+      color: var(--primary-color);
+      display: none;
+      transition: 0.3s;
+    }
+  }
+
+  .toggle-btn:is(:hover, :focus) {
+    background: var(--primary-color);
+    color: white;
+    opacity: 0.8;
+
+    svg {
+      color: var(--bg-color);
+    }
+  }
+}
+
+.logo-letter {
+  font-size: 4rem;
+  color: var(--text-logo1);
+  position: relative;
+}
+
+.logo-letter::before {
+  position: absolute;
+  content: "H";
+  left: 2px;
+  bottom: 2px;
+  right: 0;
+  font-size: inherit;
+  color: var(--text-logo2);
+}
+
+.page {
+  width: 100%;
+  opacity: 0;
+  animation: fadeIn 3s forwards;
+
+  h1 {
+    font-size: 2rem;
+    position: relative;
+    color: var(--primary-color);
+    font-family: "Coolvetica";
+    letter-spacing: 3px;
+
+    &::before,
+    &::after {
+      position: absolute;
+      left: -1.2rem;
+      font-size: 1.4rem;
+      font-family: La Belle Aurore;
+      color: var(--primary-color);
+      opacity: 0.5;
+    }
+
+    &::before {
+      content: "<h1>";
+      top: -20px;
+    }
+
+    &::after {
+      content: "</h1>";
+      bottom: -25px;
+    }
+  }
+}
+
+.btn {
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  display: inline-block;
+  margin-top: 2rem;
+  border: 2px solid var(--primary-color);
+  background: transparent;
+  color: var(--primary-color);
+  text-transform: uppercase;
+  transition: 0.5s;
+
+  &:hover {
+    color: var(--bg-color);
+    background: var(--primary-color);
+  }
+}
+
+:root.light {
+  .layout {
+    .toggle-btn {
+      svg.sun {
+        display: inline-block;
+      }
+    }
+  }
+}
+
+:root.dark {
+  .layout {
+    .toggle-btn {
+      svg.moon {
+        display: inline-block;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .layout {
+    .container {
+      margin-left: 70px;
+
+      h3 {
+        font-size: 1rem;
+      }
+    }
+
+    .toggle-btn {
+      right: 2rem;
+    }
+  }
+  .page {
+    h1 {
+      font-size: 1.5rem;
+
+      &::before,
+      &::after {
+        left: -1rem;
+        font-size: 1rem;
+      }
+
+      &::before {
+        top: -15px;
+      }
+
+      &::after {
+        bottom: -20px;
+      }
+    }
+  }
+
+  .logo-letter {
+    font-size: 3rem;
+  }
+}

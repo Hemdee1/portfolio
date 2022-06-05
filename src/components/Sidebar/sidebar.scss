@@ -1,0 +1,125 @@
+.sidebar {
+  background-color: #333;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 80px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: grid;
+  place-items: center;
+
+  h2 {
+    font-size: 0.9rem;
+    color: #eee;
+    margin-top: -1rem;
+  }
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+
+  a {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: gray;
+    transition: 0.3s;
+    position: relative;
+    text-align: center;
+
+    &::before {
+      position: absolute;
+      left: -15px;
+      top: 10px;
+      color: var(--sidebar-color);
+      font-size: 0.9rem;
+      font-family: serif;
+      text-transform: uppercase;
+      opacity: 0;
+    }
+
+    &:nth-child(1)::before {
+      content: "Home";
+      left: -5px;
+    }
+
+    &:nth-child(2)::before {
+      content: "About";
+      left: -10px;
+    }
+
+    &:nth-child(3)::before {
+      content: "Projects";
+    }
+
+    &:nth-child(4)::before {
+      content: "Contact";
+    }
+
+    &:hover {
+      svg {
+        opacity: 0;
+        transition: 0.3s;
+      }
+
+      &::before {
+        opacity: 1;
+        transition: 0.3s;
+      }
+    }
+  }
+
+  a.active {
+    color: var(--sidebar-color);
+  }
+}
+
+.social {
+  list-style: none;
+
+  li {
+    margin-bottom: 0.5rem;
+  }
+
+  a {
+    font-size: 1.3rem;
+    color: gray;
+    transition: 0.3s;
+
+    &:hover {
+      color: #ffd700;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 60px;
+  }
+
+  .logo h2 {
+    font-size: 0.7rem;
+    margin-top: -0.5rem;
+  }
+
+  .links {
+    a {
+      &::before {
+        font-size: 0.7rem;
+        left: -15px;
+      }
+
+      &:nth-child(3)::before,
+      &:nth-child(4)::before {
+        left: -10px;
+      }
+    }
+  }
+}

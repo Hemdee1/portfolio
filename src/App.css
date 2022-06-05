@@ -1,38 +1,73 @@
-.App {
-  text-align: center;
+:root {
+  --bg-color-dark: #022c43;
+  --bg-input-dark: #115173;
+  --bg-comp-dark: rgba(1, 46, 90, 0.6);
+  --primary-color-dark: #ffd700;
+  --text-color1-dark: white;
+  --text-color2-dark: #ccc;
+  --text-logo1-dark: #ffd700;
+  --text-logo2-dark: #034c94;
+  --hover-color-dark: white;
+  --sidebar-color-dark: #ffd700;
+
+  --bg-color-light: #eeeeeecc;
+  --bg-input-light: #d4d3d3;
+  --bg-comp-light: rgba(255, 255, 255, 0.6);
+  --primary-color-light: #616060;
+  --text-color1-light: black;
+  --text-color2-light: #222;
+  --text-logo1-light: black;
+  --text-logo2-light: #0776e4;
+  --hover-color-light: #ffd700;
+  --sidebar-color-light: white;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+:root.light {
+  --bg-color: var(--bg-color-light);
+  --bg-input: var(--bg-input-light);
+  --bg-comp: var(--bg-comp-light);
+  --primary-color: var(--primary-color-light);
+  --text-color1: var(--text-color1-light);
+  --text-color2: var(--text-color2-light);
+  --text-logo1: var(--text-logo1-light);
+  --text-logo2: var(--text-logo2-light);
+  --hover-color: var(--hover-color-light);
+  --sidebar-color: var(--sidebar-color-light);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+:root.dark {
+  --bg-color: var(--bg-color-dark);
+  --bg-input: var(--bg-input-dark);
+  --bg-comp: var(--bg-comp-dark);
+  --primary-color: var(--primary-color-dark);
+  --text-color1: var(--text-color1-dark);
+  --text-color2: var(--text-color2-dark);
+  --text-logo1: var(--text-logo1-dark);
+  --text-logo2: var(--text-logo2-dark);
+  --hover-color: var(--hover-color-dark);
+  --sidebar-color: var(--sidebar-color-dark);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-link {
-  color: #61dafb;
+body {
+  background-color: var(--bg-color);
+  color: #444;
+  font: 300 11px/1.4 Poppins;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.page {
+  font-family: Poppins;
 }
