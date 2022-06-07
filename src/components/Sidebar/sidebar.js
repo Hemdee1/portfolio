@@ -37,22 +37,38 @@ const Sidebar = () => {
       </div>
       <div className="social">
         <li>
-          <a href="#" target="_blank">
+          <a
+            href="https://twitter.com/SanusiMuhyideen"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <FaTwitter />
           </a>
         </li>
         <li>
-          <a href="#" target="_blank">
+          <a
+            href="https://www.instagram.com/hem__dee"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <FaInstagram />
           </a>
         </li>
         <li>
-          <a href="#" target="_blank">
+          <a
+            href="https://github.com/Hemdee1?tab=repositories"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <FaGithub />
           </a>
         </li>
         <li>
-          <a href="#" target="_blank">
+          <a
+            href="https://linkendin.com/sanusimuhyideen-77208b200"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <FaLinkedin />
           </a>
         </li>
