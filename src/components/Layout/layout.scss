@@ -2,6 +2,7 @@
   .container {
     margin-left: 100px;
     height: 100vh;
+    min-height: -webkit-fill-available;
     position: relative;
     overflow: hidden;
 

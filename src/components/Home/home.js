@@ -44,9 +44,9 @@ const Home = () => {
           <Animate strArr={role} letterClass={letterClass} index={35} />
         </h1>
         <p>
-          <span>| Frontend Developer</span>
-          <span>| Content Writing</span>
-          <span>| Photographer</span>
+          <span>Frontend Developer</span>
+          <span>Content Writing</span>
+          <span>Photographer</span>
         </p>
         <Link to="/contact" className="btn">
           Contact me
