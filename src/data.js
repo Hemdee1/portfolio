@@ -6,6 +6,12 @@ export const projects = [
     link: "https://doyastreat.netlify.app",
   },
   {
+    name: "Wordle Clone",
+    img: "wordle.png",
+    tech: ["CSS", "React JS"],
+    link: "https://hemdeewordle.netlify.app",
+  },
+  {
     name: "Countdown Timer",
     img: "countdown.png",
     tech: ["HTML", "CSS", "Javascript"],
