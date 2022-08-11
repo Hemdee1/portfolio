@@ -65,7 +65,7 @@ const Sidebar = () => {
         </li>
         <li>
           <a
-            href="https://linkendin.com/sanusimuhyideen-77208b200"
+            href="https://www.linkedin.com/in/sanusi-muhyideen-77208b200"
             target="_blank"
             rel="noopener noreferrer"
           >
