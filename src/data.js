@@ -57,7 +57,7 @@ export const projects = [
     name: "Drawing App",
     img: "draw-app.png",
     tech: ["HTML", "CSS", "Javascript"],
-    link: "https://hemdeedrumbeat.netlify.app",
+    link: "https://hemdeedrawingapp.netlify.app",
   },
   {
     name: "Simple Todo App",
